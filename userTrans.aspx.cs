@@ -30,12 +30,22 @@ public partial class userTrans : System.Web.UI.Page
         string q = "select * from fund_transfer where frfid='" + rfid + "'";
         DataTable dt = new DataTable();
         SqlDataAdapter dp = new SqlDataAdapter(q, con.con_pass());
-        dp.Fill(dt);
-        if (dt.Rows.Count > 0)
+        if(dp == null)
         {
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+            Response.Write("<script>alert('No transaction found'); window.location.href(viewProfile.aspx);</script>");
+        }
+        else { 
+            dp.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
 
+            }
+            else
+            {
+                Response.Write("<script>alert('No transaction found'); window.location.href(viewProfile.aspx);</script>");
+            }
         }
     }
 

@@ -83,9 +83,12 @@ public partial class register : System.Web.UI.Page
                     SqlCommand cmdcard = new SqlCommand(stcard, con.con_pass());
                     cmdcard.ExecuteNonQuery();
                     con.close_connection();
-                    Label9.Visible = true;
-                    Label9.Text = "!!..Hi.." + txtFname.Text + " " + txtLName.Text + "',  Your Account is successfully created check Your Email ID for further Details..!!";
-                
+
+                //Label9.Visible = true
+                Response.Write("<script>alert('Your Account is successfully created. Please login into your account...!!'); window.location.href = 'login.aspx'; </script>"); 
+                //Label9.Text = "!!..Hi.." + txtFname.Text + " " + txtLName.Text + "',  Your Account is successfully created check Your Email ID for further Details..!!";
+
+                resetFields();
             }
 
         }
@@ -94,6 +97,18 @@ public partial class register : System.Web.UI.Page
             Label9.Visible = true;
             Label9.Text = ex.Message;
         }
+    }
+
+    protected void resetFields()
+    {
+        txtFname.Text = null; txtLName.Text = null; txtLName.Text = null;
+        txtEmail.Text = null; txtcEmail.Text = null; txtAdd.Text = null;
+        txtPostal.Text = null; txtPone.Text = null; txtPass.Text = null;
+        txtFather.Text = null; txtDOB.Text = null; txtTag.Text = null;
+        txtCity.Text = null;  radGen.SelectedIndex = -1;
+        txtCountry.SelectedIndex = 0; txtState.SelectedIndex = 0;
+        DropDownList1.SelectedIndex = 0;
+        Image1.ImageUrl = "";
     }
 
     protected void SendMail()
@@ -105,7 +120,7 @@ public partial class register : System.Web.UI.Page
         //Password of your gmail address
         const string fromPassword = "trymelater";
         // Passing the values and make a email formate to display
-        string subject = "WELCOME to Student Smart Card Please Write Down Your User Name and Password";
+        string subject = "WELCOME to Cashless Campus Please Write Down Your User Name and Password";
         string body = "Student Smart Card" + "\n";
         body += "User Name: " + txtEmail.Text + "\n";
         body += "Password: " + txtPass.Text + "\n";
@@ -168,6 +183,5 @@ public partial class register : System.Web.UI.Page
                     txtEmail.Text = "";
                     txtcEmail.Text = "";
                 }
-               
     }
 }

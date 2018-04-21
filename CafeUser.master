@@ -47,7 +47,7 @@
 
 </head>
 <div style="background:red; width:870px;margin-left:230px;margin-top:-20px;" >
- <marquee onmouseover="stop();" onmouseout="start();" ><center><h1 style="color:yellow;margin-top:auto;">Student Smart Card</h1></center></marquee>
+ <marquee onmouseover="stop();" onmouseout="start();" ><center><h1 style="color:yellow;margin-top:auto;">Cashless Campus</h1></center></marquee>
  
 </div><br />
 <body>
@@ -107,7 +107,7 @@
 <div id="page">
 	<div id="content1">
 		<center><div class="post">
-			<h2 class="title1">Welcome to Student Smart Card</h2>
+			<h2 class="title1">Welcome to Cashless Campus</h2>
               
    
 
@@ -127,7 +127,7 @@
 <!-- end #page -->
 
 <div id="footer">
-	<p>Copyright (c) 2017 Student Smart Card</p>
+	<p>Copyright (c) 2018 Cashless Campus</p>
 </div>
 <!-- end #footer -->
 </div>

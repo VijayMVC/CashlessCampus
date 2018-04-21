@@ -16,10 +16,7 @@
 <td colspan="2" align="center">
     <asp:Button ID="Button1" runat="server" Text="Verify Me" 
         onclick="Button1_Click" />
-
-
 </td>
-
 
 </tr>
 <tr>
@@ -32,9 +29,7 @@
 <td colspan="2" align="center">
     <asp:Button ID="Button2" runat="server" Text="Send Password" 
         onclick="Button2_Click" />
-
 </td>
-
 </tr>
 
 </table>
