@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Blogging
+Description: A two-column, fixed-width design for 1024x768 screen resolutions.
+Version    : 1.0
+Released   : 20090208
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<head id="Head1" runat="server">
+
+<script type="text/javascript" src="js/jquery-1.6.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui.min.js" ></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#featured > ul").tabs({ fx: { opacity: "toggle"} }).tabs("rotate", 5000, true);
+    });
+</script>
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="js/ddsmoothmenu.js">
+
+    /***********************************************
+    * Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+    * This notice MUST stay intact for legal use
+    * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+    ***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+    ddsmoothmenu.init({
+        mainmenuid: "tooplate_menu", //menu DIV id
+        orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+        classname: 'ddsmoothmenu', //class added to menu's outer DIV
+        //customtheme: ["#1c5a80", "#18374a"],
+        contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+    })
+
+</script>
+
+<link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" /> 
+<script type="text/JavaScript" src="js/slimbox2.js"></script> 
+<link rel="stylesheet" href="css/slides.css" type="text/css" media="screen" />
+
+<script type="text/javascript" language="javascript" src="js/jquery.carouFredSel-5.3.0-packed.js"></script>
+<script type="text/javascript" language="javascript">
+    $(function () {
+
+        //	Scrolled by user interaction
+        $('#foo2').carouFredSel({
+            prev: '#prev2',
+            next: '#next2',
+            pagination: "#pager2",
+            auto: true
+        });
+
+        $('#foo3').carouFredSel({
+            prev: '#test_prev',
+            next: '#test_next',
+            auto: true
+        });
+
+    });
+</script>
+<style type="text/css">
+      .s
+       {
+       	background-color:Blue;
+       	color:White;
+       	top:180px;
+       	left:180px;
+       	position:relative;
+       	top:-4em; left:7em; width:15em;
+       	visibility:hidden;
+       }
+      
+      .sa
+       {
+       	background-color:Yellow;
+       	color:Blue;
+       	top:180px;
+       	left:180px;
+       	position:relative;
+       	top:-22.5em; left:10em; width:15em;
+       	font-size:small;
+       	visibility:hidden;
+       }
+
+    </style>
+    <script type="text/javascript">
+        var secs
+        var timerID = null
+        var timerRunning = false
+        var delay = 1000
+        var iarr = new Array(5);
+        var i = 0;
+        var j = new Image();
+        j.src = "images/10.jpg";
+        iarr[0] = "images/11.jpg";
+        iarr[1] = "images/12.jpg";
+        iarr[2] = "images/13.jpg";
+        iarr[3] = "images/11.jpg";
+        iarr[4] = "images/12.jpg";
+        iarr[5] = "images/10.jpg";
+        iarr[6] = "images/13.jpg";
+        iarr[7] = "images/12.jpg";
+        iarr[8] = "images/10.jpg";
+        function next() {
+            if (i < 5) {
+                i = i + 1;
+                window.document.getElementById("img1").src = iarr[i];
+            }
+        }
+        function previous() {
+            if (i > 0) {
+                i = i - 1;
+                window.document.getElementById("img1").src = iarr[i];
+            }
+        }
+
+        function StartTimer() {
+            // Set the length of the timer, in seconds
+            secs = 5
+            StopTheClock()
+            StartTheTimer()
+        }
+        function StopTheClock() {
+            if (timerRunning)
+                clearTimeout(timerID)
+            timerRunning = false
+        }
+
+        function StartTheTimer() {
+            if (secs == 0) {
+                StopTheClock()
+                if (i >= 5)
+                    i = 0;
+                else
+                    i = i + 1;
+                // document.getElementById("img1").src="pic/Tulips.jpg";
+                document.getElementById("img1").src = iarr[i];
+                //alert("after 5 second")
+                StartTimer()
+            }
+            else {
+                self.status = secs
+                secs = secs - 1
+                window.document.getElementById("val").innerHTML = "Image will change after " + (secs + 1) + " Secs";
+                timerRunning = true
+                timerID = self.setTimeout("StartTheTimer()", delay)
+            }
+        }
+
+        function vis() {
+            window.document.getElementById("control").style.visibility = "visible";
+        }
+        function hid() {
+            window.document.getElementById("control").style.visibility = "hidden";
+        }
+
+    </script>
+</head>
+<div style="background:red; width:870px;margin-left:230px;margin-top:-20px;" >
+ <marquee onmouseover="stop();" onmouseout="start();" ><center><h1 style="color:yellow;margin-top:auto;">Student Smart Card</h1></center></marquee>
+ 
+</div><br />
+<body>
+<div id="wrapper">
+
+
+	<div id="header">
+		<div id="menu">
+			<ul>
+				<li><a href="Default.aspx">Home</a></li>
+                <li><a href="login.aspx">Login</a></li>
+				
+				<li><a href="about.aspx">About</a></li>
+				
+				<li><a href="contact.aspx">Contact</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<!-- end #search -->
+	</div>
+	<!-- end #header -->
+	<div class="slides" style="width: 900px;height: 218px;">
+        <ul>
+                    <!-- slides -->
+                    <li>
+                        <img class="b" src="images/1.jpg" alt="img1" /> </li>
+            <li>
+                <img class="b" src="images/2.jpg" alt="img2" /> </li>
+            <li>
+                <img class="b" src="images/3.jpg" alt="img3" /> </li>
+            <li>
+                <img class="b" src="images/5.png" alt="img4" /> </li>
+        </ul>
+    </div>
+	<hr />
+	<!-- end #logo -->
+<!-- end #header-wrapper -->
+
+<div id="page">
+	<div id="content">
+		<div class="post">
+			<h2 class="title">Welcome to Student Smart Card </h2>
+			<div class="entry">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+			
+			</div>
+            <table style="width:100%;">
+                    <tr style="height:350px; width:450px;">
+                        <td align="center" ><img id="img1" src="images/10.jpg" alt="Image Gallary" onload="StartTimer();" onmouseover="vis();" onmouseout="hid();" style="width:450px; height:350px;"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                           <div id="val" class="sa"></div>
+                           <%--<div id="control" class="s" onmouseover="vis();" >
+                            <input id="Button1" type="button" value="Next" onclick="next();" 
+                                style="background-color: #CCFF66; color: #800000; font-weight: bold;" />
+                            <input id="Button2" type="button" value="Previous" onclick="previous();" 
+                                style="background-color: #CCFF66; color: #800000; font-weight: bold;"/>
+                            <input id="Button3" type="button" value="Play" onclick="StartTheTimer();" 
+                                style="background-color: #CCFF66; color: #800000; font-weight: bold;"/>
+                            <input id="Button4" type="button" value="Stop" onclick="StopTheClock();" 
+                                style="background-color: #CCFF66; font-weight: bold; color: #800000;"/>
+                             </div>--%>
+                             
+                             </td>
+                    </tr>
+                </table>
+		</div>
+		
+		
+	</div>
+	<!-- end #content -->
+	<div id="sidebar">
+		<ul>
+			<li>
+				<h2>Register</h2>
+
+               <form id="loginFrm" runat="server">
+               <table style="width: 230px">
+     <tr>
+     <td><b>New User Register Here</b></td>
+     </tr>
+            <tr><td><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl ="~/register.aspx">Register</asp:HyperLink></td></tr>
+    </table>
+              
+
+                    
+				<h2>Calendar</h2>
+                
+                <asp:Calendar ID="Calendar1" runat="server">
+        <TodayDayStyle BackColor="Aqua" />
+     </asp:Calendar>
+                
+				
+			</li>
+               
+               </form>
+				
+			</li>
+			
+			
+		</ul>
+	</div>
+	<!-- end #sidebar -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end #page -->
+
+<div id="footer">
+	<p>Copyright (c) 2017 Student Smart Card</p>
+</div>
+<!-- end #footer -->
+</div>
+</body>
+</html>

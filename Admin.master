@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery-1.6.3.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui.min.js" ></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#featured > ul").tabs({ fx: { opacity: "toggle"} }).tabs("rotate", 5000, true);
+    });
+</script>
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="js/ddsmoothmenu.js">
+
+    /***********************************************
+    * Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+    * This notice MUST stay intact for legal use
+    * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+    ***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+    ddsmoothmenu.init({
+        mainmenuid: "tooplate_menu", //menu DIV id
+        orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+        classname: 'ddsmoothmenu', //class added to menu's outer DIV
+        //customtheme: ["#1c5a80", "#18374a"],
+        contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+    })
+
+</script>
+
+<link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" /> 
+<script type="text/JavaScript" src="js/slimbox2.js"></script> 
+<link rel="stylesheet" href="css/slides.css" type="text/css" media="screen" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+<div style="background:red; width:870px;margin-left:230px;margin-top:-20px;" >
+ <marquee onmouseover="stop();" onmouseout="start();" ><center><h1 style="color:yellow;margin-top:auto;">Student Smart Card</h1></center></marquee>
+ 
+</div><br />
+<body>
+<div id="wrapper">
+
+	<div id="header"><br />
+		<div  id="tooplate_menu" class="ddsmoothmenu">
+			<ul>
+				
+                 <li><a href="viewUser.aspx">User List</a> 
+                 
+                 
+                 </li>
+                
+                <li><a href="#">View Graph</a>
+                <ul>
+               
+                
+                 <li><a href="admin_view_user_graph.aspx">All Type User</a></li>
+                 <li><a href="admin_view_user_graph_Gender.aspx">Gender Wise</a></li>
+                
+                </ul>
+                
+                </li>
+				<li><a href="rechargeCard.aspx">Recharge Card</a></li>
+                <li><a href="Default.aspx">Log Out</a></li>
+				
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<!-- end #search -->
+	</div>
+	<!-- end #header -->
+	<div class="slides" style="width: 900px;height: 218px;">
+        <ul>
+                    <!-- slides -->
+                     <li>
+                        <img class="b" src="images/1.jpg" alt="img1" /> </li>
+            <li>
+                <img class="b" src="images/2.jpg" alt="img2" /> </li>
+            <li>
+                <img class="b" src="images/3.jpg" alt="img3" /> </li>
+            <li>
+                <img class="b" src="images/5.png" alt="img4" /> </li>
+        </ul>
+    </div>
+	<hr />
+	<!-- end #logo -->
+<!-- end #header-wrapper -->
+
+<div id="page">
+	<div id="content1">
+		<center><div class="post">
+			<h2 class="title1">Welcome to Student Smart Card</h2>
+              
+   
+
+		</center>
+	</div>
+	<!-- end #content -->
+	<!-- end #sidebar -->
+	
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</div>
+<!-- end #page -->
+
+<div id="footer">
+	<p>Copyright (c) 2017 Student Smart Card</p>
+</div>
+<!-- end #footer -->
+</div>
+    
+</body>
+</html>
